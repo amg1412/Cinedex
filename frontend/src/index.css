@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-secondary font-semibold rounded-lg hover:bg-yellow-400 transition duration-200 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-surface text-text-primary border border-primary font-semibold rounded-lg hover:bg-primary hover:text-secondary transition duration-200;
+  }
+
+  .btn-outline {
+    @apply px-4 py-2 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-secondary transition duration-200;
+  }
+
+  .card {
+    @apply bg-surface rounded-lg shadow-lg p-4 border border-gray-700 hover:border-primary transition duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 bg-surface border border-gray-700 rounded-lg text-text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition duration-200 placeholder-text-secondary;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  /* Movie Card - Hero Poster Focus */
+  .movie-card {
+    @apply relative overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition duration-300 group cursor-pointer;
+  }
+
+  .movie-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4;
+  }
+
+  /* Text for dark theme */
+  .text-primary {
+    @apply text-text-primary;
+  }
+
+  .text-secondary {
+    @apply text-text-secondary;
+  }
+}
