@@ -1,1 +1,2 @@
 web: npm start
+release: echo "CineHive Backend Deployed"

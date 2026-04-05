@@ -1,0 +1,8 @@
+[build]
+node-version = "18.20.8"
+
+[build.install]
+run = ["npm ci"]
+
+[start]
+run = "npm start"
